@@ -25,7 +25,7 @@ runs:
     - name: jalankan file formatter
       shell: bash
       run: |
-        filename_formtter.sh ${{ inputs.working-directory }} ${{ inputs.filetypes }}
+        filename_formatter.sh ${{ inputs.working-directory }} ${{ inputs.filetypes }}
     - name: commit perubahan
       shell: bash
       run: |
