@@ -25,6 +25,7 @@ runs:
     - name: jalankan formatter
       shell: bash
       run: |
+        git update-inde --chmod=+x filename_formatter.sh
         filename_formatter.sh ${{ inputs.working-directory }} ${{ inputs.filetypes }} ${{ inputs.ignore-files }}
     - name: commit perubahan
       shell: bash
