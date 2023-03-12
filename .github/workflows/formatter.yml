@@ -10,6 +10,10 @@ jobs:
     name: verifikasi file fromatter berjalan
     steps:
       - uses: actions/checkout@v3
+      - name: chmod filename formatter
+        shell: bash
+        run: |
+          git update-index --chmod=+x ./formatter/filename_formatter.sh
       - uses: ./formatter
         with:
           filetypes: .cpp, .hpp
